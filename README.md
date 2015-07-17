@@ -2,9 +2,11 @@
 发送消息到纷云 message to lesschat - 纷云
 
 
+安装执行 `npm install lesschat-push`
+
 ```
 var lesschatPush = require("lesschat-push");
-var webhook = new lesschatPush.Webhook("https://hook.lesschat.com/incoming/xxxxxx"); // 纷云 outgoing url
+var webhook = new lesschatPush.Webhook("https://hook.lesschat.com/incoming/xxxxxx");
 
 // 发送 attachment 消息
 webhook.sendAttachment({
@@ -19,15 +21,25 @@ webhook.sendAttachment({
     text       : "普通文本消息，支持\n换行",
 
     //多区域格式消息正文
-    fields     : [
+    fields: [
         {
             title: "分区消息标题",
             value: "分区消息内容",
             short: 1 // 标识消息的内容时候时候为短消息
         }
     ]
+}, function (err, resp, body) {
+    if (err) {
+        console.error(err);
+    }
+    console.log(body);
 });
 
 // 发送文本消息
-webhook.sendText("这是一条来自于Incoming Webhook的消息。\n并且消息还可以换行。");
+webhook.sendText("这是一条来自于Incoming Webhook的消息。\n并且消息还可以换行。", function (err, resp, body) {
+    if (err) {
+        console.error(err);
+    }
+    console.log(body);
+});
 ```

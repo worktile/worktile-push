@@ -1,6 +1,7 @@
 var lesschatPush = require("../");
 var webhook = new lesschatPush.Webhook("https://hook.lesschat.com/incoming/3c80847482d842ffa8353e4e0afc981e");
 
+// 发送 attachment 消息
 webhook.sendAttachment({
     fallback   : "用于移动端将提示信息显示在首页上",
     color      : "#cccccc",  //将消息的正文用指定的颜色进行标示
@@ -27,6 +28,7 @@ webhook.sendAttachment({
     console.log(body);
 });
 
+// 发送文本消息
 webhook.sendText("这是一条来自于Incoming Webhook的消息。\n并且消息还可以换行。", function (err, resp, body) {
     if (err) {
         console.error(err);
