@@ -1,5 +1,5 @@
 var lesschatPush = require("../");
-var webhook = new lesschatPush.Webhook("https://hook.lesschat.com/incoming/3c80847482d842ffa8353e4e0afc981e");
+var webhook = new lesschatPush.Webhook("https://hook.lesschat.com/incoming/xxx");
 
 // 发送 attachment 消息
 webhook.sendAttachment({
