@@ -1,6 +1,5 @@
-
 var lesschatPush = require("../");
-var webhook = new lesschatPush.Webhook("https://hook.lesschat.com/incoming/xxxxxx");
+var webhook = new lesschatPush.Webhook("https://hook.lesschat.com/incoming/3c80847482d842ffa8353e4e0afc981e");
 
 webhook.sendAttachment({
     fallback   : "用于移动端将提示信息显示在首页上",
@@ -14,13 +13,23 @@ webhook.sendAttachment({
     text       : "普通文本消息，支持\n换行",
 
     //多区域格式消息正文
-    fields     : [
+    fields: [
         {
             title: "分区消息标题",
             value: "分区消息内容",
             short: 1 // 标识消息的内容时候时候为短消息
         }
     ]
+}, function (err, resp, body) {
+    if (err) {
+        console.error(err);
+    }
+    console.log(body);
 });
 
-webhook.sendText("这是一条来自于Incoming Webhook的消息。\n并且消息还可以换行。");
+webhook.sendText("这是一条来自于Incoming Webhook的消息。\n并且消息还可以换行。", function (err, resp, body) {
+    if (err) {
+        console.error(err);
+    }
+    console.log(body);
+});

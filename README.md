@@ -1,4 +1,4 @@
-# lesschat-push
+# lesschat-push for Node.js
 发送消息到纷云 message to lesschat - 纷云
 
 

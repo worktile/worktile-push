@@ -1,6 +1,6 @@
 {
   "name": "lesschat-push",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "push message to lesschat - 纷云",
   "main": "lib/index.js",
   "dependencies": {
