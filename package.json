@@ -1,11 +1,18 @@
 {
   "name": "lesschat-push",
   "version": "1.0.1",
-  "description": "push message to lesschat - 纷云",
+  "description": "push message to lesschat for Node.js - 纷云",
   "main": "lib/index.js",
   "dependencies": {
     "request": "^2.58.0"
   },
+  "keywords": [
+    "lesschat",
+    "纷云",
+    "Node.js",
+    "message",
+    "push"
+  ],
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
