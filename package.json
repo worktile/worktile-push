@@ -1,0 +1,23 @@
+{
+  "name": "lesschat-push",
+  "version": "1.0.0",
+  "description": "push message to lesschat - 纷云",
+  "main": "lib/index.js",
+  "dependencies": {
+    "request": "^2.58.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WorktileTech/lesschat-push.git"
+  },
+  "author": "YCTech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WorktileTech/lesschat-push/issues"
+  },
+  "homepage": "https://github.com/WorktileTech/lesschat-push#readme"
+}

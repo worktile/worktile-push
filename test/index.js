@@ -1,12 +1,7 @@
-# lesschat-push
-发送消息到纷云 message to lesschat - 纷云
 
+var lesschatPush = require("../");
+var webhook = new lesschatPush.Webhook("https://hook.lesschat.com/incoming/xxxxxx");
 
-```
-var lesschatPush = require("lesschat-push");
-var webhook = new lesschatPush.Webhook("https://hook.lesschat.com/incoming/xxxxxx"); // 纷云 outgoing url
-
-// 发送 attachment 消息
 webhook.sendAttachment({
     fallback   : "用于移动端将提示信息显示在首页上",
     color      : "#cccccc",  //将消息的正文用指定的颜色进行标示
@@ -28,6 +23,4 @@ webhook.sendAttachment({
     ]
 });
 
-// 发送文本消息
 webhook.sendText("这是一条来自于Incoming Webhook的消息。\n并且消息还可以换行。");
-```
