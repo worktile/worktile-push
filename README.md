@@ -42,4 +42,7 @@ webhook.sendText("这是一条来自于Incoming Webhook的消息。\n并且消�
     }
     console.log(body);
 });
+
+// callback 函数可选
+
 ```
