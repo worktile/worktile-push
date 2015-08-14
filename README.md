@@ -1,6 +1,7 @@
 # lesschat-push for Node.js
 发送消息到纷云 message to lesschat - 纷云
 
+*已经迁移到 https://github.com/lesschat/lesschat-push 仓储中*
 
 安装执行 `npm install lesschat-push`
 
